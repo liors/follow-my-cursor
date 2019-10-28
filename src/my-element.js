@@ -1,8 +1,8 @@
 import { LitElement, html } from 'lit-element';
 import { styleMap } from 'lit-html/directives/style-map';
 import './person-element.js';
-import groupBy from './node_modules/lodash-es/groupBy.js';
-import images from './defaultImages.json';
+import groupBy from '../node_modules/lodash-es/groupBy.js';
+import images from '../defaultImages.json';
 
 class MyElement extends LitElement {
   constructor() {

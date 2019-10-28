@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "copyindex": "cp index.html build",
+    "copyindex": "cp src/index.html build",
     "copywc": "cp -r node_modules/@webcomponents/webcomponentsjs/bundles build && cp node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js build",
     "build": "rm -rf build && mkdir build && npm run copyindex && npm run copywc && rollup -c",
     "start": "serve build"
