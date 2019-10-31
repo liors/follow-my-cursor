@@ -1,9 +1,10 @@
 {
   "scripts": {
-    "copyindex": "cp src/index.html build",
-    "copywc": "cp -r node_modules/@webcomponents/webcomponentsjs/bundles build && cp node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js build",
-    "build": "rm -rf build && mkdir build && npm run copyindex && npm run copywc && rollup -c",
-    "start": "serve build"
+    "copyindex": "cp src/index.html public",
+    "copywc": "cp -r node_modules/@webcomponents/webcomponentsjs/bundles public && cp node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js public",
+    "build": "rm -rf public && mkdir public && npm run copyindex && npm run copywc && rollup -c",
+    "start": "serve public",
+    "deploy": "now"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -14,7 +15,8 @@
     "rollup-plugin-babel": "^4.3.0",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^4.0.0",
-    "serve": "^10.1.1"
+    "serve": "^10.1.1",
+    "now": "^16.4.4"
   },
   "dependencies": {
     "lit-element": "^2.2.1",
